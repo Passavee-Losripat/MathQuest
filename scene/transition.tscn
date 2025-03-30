@@ -1,0 +1,713 @@
+[gd_scene load_steps=35 format=3 uid="uid://ceiit7cw6ilyv"]
+
+[ext_resource type="Script" path="res://scene/transition.gd" id="1_72ttf"]
+[ext_resource type="Texture2D" uid="uid://qwpteairmbks" path="res://art/princess_house.png" id="2_72ttf"]
+[ext_resource type="Texture2D" uid="uid://vker56idx3gq" path="res://art/Free Smoke Fx  Pixel 04.png" id="3_nld0c"]
+[ext_resource type="Texture2D" uid="uid://cgie3cwbvbbm0" path="res://art/objects/potion.png" id="5_7bmeb"]
+[ext_resource type="Texture2D" uid="uid://cvdspys3ai0jv" path="res://art/Slime1_Walk_full.png" id="5_nld0c"]
+[ext_resource type="AudioStream" uid="uid://d3jf30247d57x" path="res://sound/romantic.mp3" id="7_7bmeb"]
+[ext_resource type="Texture2D" uid="uid://bggtdrv3soe44" path="res://art/slime_person.png" id="12_fdgef"]
+
+[sub_resource type="Animation" id="Animation_7bpvc"]
+resource_name = "Intro"
+length = 17.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Characters/slime:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.813711, 2, 14.9333, 15.2333, 15.5667, 16, 16.4333, 16.8333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(117, 296), Vector2(117, 296), Vector2(350, 296), Vector2(350, 296), Vector2(412, 232), Vector2(519, 195), Vector2(717, 185), Vector2(821, 261), Vector2(1200, 258)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/UI/Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.07713, 3.8, 5.39581, 8.7, 12.5746, 14.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.9, 2.63333, 3.8142, 5.43333, 7.23333),
+"transitions": PackedFloat32Array(1, 1.07177, 1.07177, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.86667, 4.84431, 12.5746),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["สไลม์", "เจ้าหญิง", "สไลม์"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/RichTextLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.15449, 4.26667, 12.5746),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["แต่งงานกันนะต้าว", "อ๋อไม่อ่ะ อยากแต่งกับคนปกติ
+", "มุแง้ งั้นเดี๋ยวเป็นคนละจะมาหานะต้าว"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/Characters/slime:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 9.33333, 9.66667, 10.0333, 10.3667, 10.7667, 11.1333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.698132, 0.698132, -0.698132, 0.698132, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_fy8cc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Characters/slime:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(117, 296)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/UI/Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Princess"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/RichTextLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Ew! NO! I would marry only HUMAN
+
+"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/Characters/slime:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/Characters/slime_mob:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(661.344, 391.875)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/Characters/Potion:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(904, 694)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/Characters/Potion:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer/Characters/Potion:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationPlayer/Characters/slime_mob:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationPlayer/Characters/slime:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationPlayer/Characters/bomb:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimationPlayer/Characters/slime:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.267187, 0.259961)]
+}
+
+[sub_resource type="Animation" id="Animation_fgqyh"]
+resource_name = "ending_scene"
+length = 24.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Characters/slime:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.433333, 2.53333, 17.9934, 20.0667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-67, 383), Vector2(545, 391), Vector2(545, 391), Vector2(600, 391)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/UI/Panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.133333, 3.42, 6.1, 7.4388, 9.63333, 10.92, 13.4, 15.3333, 18.0212),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/RichTextLabel:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.42, 7.4388, 10.92, 15.3584),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["แต่งค่ะ ❤️
+
+", "???
+
+", "แต่งค่ะ❤️", "รู้งี้ตั้งใจเรียนคณิศาสตร์ตั้งแต่แรกละ"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/RichTextLabel:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.43333, 4.03333, 6.06667, 7.36667, 8.26667, 9.6444, 10.92, 11.7333, 13.406, 15.3584, 17.0376),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/UI/Panel/VBoxContainer/Label:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.44, 7.4388, 10.92, 15.3584),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["เจ้าหญิง", "สไลม์", "เจ้าหญิง", "สไลม์"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/Characters/slime_mob:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(18, 19.9667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(661.344, 391.875), Vector2(630, 391.875)]
+}
+
+[sub_resource type="Animation" id="Animation_7bmeb"]
+resource_name = "transition"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Characters/Potion:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.45068, 2.23333, 2.53333, 2.8, 3.06667, 3.33333, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(892.932, 724.117), Vector2(568.932, 534.117), Vector2(580, 520), Vector2(568, 530), Vector2(580, 520), Vector2(568, 530), Vector2(580, 520), Vector2(568, 530)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Characters/slime_mob:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.45068),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(859.932, 757.117), Vector2(535.932, 567.117)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Characters/Potion:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.47805, 2.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.49066]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/Characters/Potion:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.66667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/Characters/slime:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.9679, 5.36667, 10, 14.0333, 14.4602),
+"transitions": PackedFloat32Array(1, 1e+06, 0.95368, 1.09548, 1, 1),
+"update": 0,
+"values": [Vector2(-165, 624), Vector2(527, 554), Vector2(527, 554), Vector2(240, 520), Vector2(958, 475), Vector2(951, 444)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/Characters/slime_mob:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.9679),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/Characters/slime:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.233333, 4.97283, 15.1881),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/Characters/bomb:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 4.99528, 5.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/Characters/slime:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(4.97177, 5.36667, 6.60404),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.267187, 0.259961), Vector2(0.267187, 0.259961), Vector2(0.2, 0.195)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ru3q"]
+_data = {
+&"Intro": SubResource("Animation_7bpvc"),
+&"RESET": SubResource("Animation_fy8cc"),
+&"ending_scene": SubResource("Animation_fgqyh"),
+&"transition": SubResource("Animation_7bmeb")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bmeb"]
+atlas = ExtResource("3_nld0c")
+region = Rect2(7, 448, 63, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha7wt"]
+atlas = ExtResource("3_nld0c")
+region = Rect2(70, 448, 63, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1tni"]
+atlas = ExtResource("3_nld0c")
+region = Rect2(133, 448, 63, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jlrm"]
+atlas = ExtResource("3_nld0c")
+region = Rect2(196, 448, 63, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sib1q"]
+atlas = ExtResource("3_nld0c")
+region = Rect2(259, 448, 63, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1d4i"]
+atlas = ExtResource("3_nld0c")
+region = Rect2(322, 448, 63, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1urb"]
+atlas = ExtResource("3_nld0c")
+region = Rect2(385, 448, 63, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_227i8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bmeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha7wt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1tni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jlrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sib1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1d4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1urb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhfs7"]
+atlas = ExtResource("12_fdgef")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjk7n"]
+atlas = ExtResource("12_fdgef")
+region = Rect2(1280, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c0w3"]
+atlas = ExtResource("12_fdgef")
+region = Rect2(2560, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkkn2"]
+atlas = ExtResource("12_fdgef")
+region = Rect2(3840, 0, 1280, 1280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ksdd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhfs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjk7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c0w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkkn2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2sg6"]
+atlas = ExtResource("5_nld0c")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbl2j"]
+atlas = ExtResource("5_nld0c")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_866hd"]
+atlas = ExtResource("5_nld0c")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha50a"]
+atlas = ExtResource("5_nld0c")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pll12"]
+atlas = ExtResource("5_nld0c")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jppt8"]
+atlas = ExtResource("5_nld0c")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gj5h7"]
+atlas = ExtResource("5_nld0c")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5lbj"]
+atlas = ExtResource("5_nld0c")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbcio"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2sg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbl2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_866hd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha50a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pll12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jppt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gj5h7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5lbj")
+}],
+"loop": true,
+"name": &"princess_idle",
+"speed": 5.0
+}]
+
+[node name="transition" type="Node2D"]
+script = ExtResource("1_72ttf")
+
+[node name="PrincessHouse" type="Sprite2D" parent="."]
+position = Vector2(580.5, 325.5)
+scale = Vector2(2.00521, 2.00926)
+texture = ExtResource("2_72ttf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8ru3q")
+}
+autoplay = "ending_scene"
+
+[node name="UI" type="CanvasLayer" parent="AnimationPlayer"]
+
+[node name="Panel" type="Panel" parent="AnimationPlayer/UI"]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -281.0
+offset_right = 281.0
+offset_bottom = 158.0
+grow_horizontal = 2
+pivot_offset = Vector2(-1560, -466)
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnimationPlayer/UI/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 158.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="AnimationPlayer/UI/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Princess"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AnimationPlayer/UI/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 28
+text = "Ew! NO! I would marry only HUMAN
+
+"
+fit_content = true
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Characters" type="Node2D" parent="AnimationPlayer"]
+
+[node name="bomb" type="AnimatedSprite2D" parent="AnimationPlayer/Characters"]
+visible = false
+position = Vector2(565.938, 545.5)
+scale = Vector2(4.22024, 4.20312)
+sprite_frames = SubResource("SpriteFrames_227i8")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.391655
+
+[node name="slime" type="AnimatedSprite2D" parent="AnimationPlayer/Characters"]
+visible = false
+position = Vector2(117, 296)
+scale = Vector2(0.267187, 0.259961)
+sprite_frames = SubResource("SpriteFrames_8ksdd")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.556255
+
+[node name="slime_mob" type="AnimatedSprite2D" parent="AnimationPlayer/Characters"]
+visible = false
+position = Vector2(661.344, 391.875)
+scale = Vector2(4.24786, 3.40991)
+sprite_frames = SubResource("SpriteFrames_wbcio")
+animation = &"princess_idle"
+autoplay = "princess_idle"
+frame_progress = 0.893361
+
+[node name="Potion" type="Sprite2D" parent="AnimationPlayer/Characters"]
+position = Vector2(904, 694)
+scale = Vector2(2.625, 2.3125)
+texture = ExtResource("5_7bmeb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 323)
+limit_left = 0
+limit_top = 0
+limit_right = 1500
+limit_bottom = 0
+
+[node name="AudioListener2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_7bmeb")
+volume_db = -2.213
+autoplay = true

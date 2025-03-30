@@ -1,0 +1,176 @@
+[gd_scene load_steps=12 format=3 uid="uid://byli5h5em4x7j"]
+
+[ext_resource type="Script" uid="uid://dr0oyhdga1dp1" path="res://field_2.gd" id="1_dfmsr"]
+[ext_resource type="PackedScene" uid="uid://d4l25fmm44enc" path="res://flying_monster.tscn" id="2_u3xdp"]
+[ext_resource type="Texture2D" uid="uid://burp15udovfv6" path="res://art/S_4.png" id="3_rpr06"]
+[ext_resource type="Texture2D" uid="uid://vw84yovuu80c" path="res://art/sign.png" id="4_fm4ax"]
+[ext_resource type="Texture2D" uid="uid://dcwiutoa2s12o" path="res://art/sign1.png" id="5_mubmw"]
+[ext_resource type="AudioStream" uid="uid://c3hoxaulo513r" path="res://sound/duckhunt.mp3" id="6_rpr06"]
+[ext_resource type="AudioStream" uid="uid://du53fkj2m7mj0" path="res://sound/score.mp3" id="7_fm4ax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jput1"]
+size = Vector2(75.9999, 628)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cutk"]
+size = Vector2(1148, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6e7u2"]
+size = Vector2(73, 618)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujqnb"]
+size = Vector2(1152, 59)
+
+[node name="field" type="Node2D"]
+script = ExtResource("1_dfmsr")
+bird_node = ExtResource("2_u3xdp")
+
+[node name="BG" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(580.667, 325.5)
+scale = Vector2(2.00926, 2.00926)
+texture = ExtResource("3_rpr06")
+
+[node name="wall" type="StaticBody2D" parent="."]
+position = Vector2(-6.10352e-05, 0)
+
+[node name="left" type="CollisionShape2D" parent="wall"]
+position = Vector2(-40, 315)
+shape = SubResource("RectangleShape2D_jput1")
+
+[node name="top" type="CollisionShape2D" parent="wall"]
+position = Vector2(574, -31)
+shape = SubResource("RectangleShape2D_0cutk")
+
+[node name="right" type="CollisionShape2D" parent="wall"]
+position = Vector2(1197, 308)
+shape = SubResource("RectangleShape2D_6e7u2")
+
+[node name="down" type="CollisionShape2D" parent="wall"]
+position = Vector2(575, 650)
+shape = SubResource("RectangleShape2D_ujqnb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="bullet" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.355
+anchor_bottom = 0.332
+offset_left = 710.0
+offset_top = 458.0
+offset_right = 358.04
+offset_bottom = 271.864
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/bullet"]
+layout_mode = 0
+offset_left = -29.0
+offset_top = -16.0
+offset_right = 112.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "Bullet"
+metadata/_edit_use_anchors_ = true
+
+[node name="round" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.076
+anchor_top = 0.106
+anchor_right = 0.165
+anchor_bottom = 0.157
+offset_left = 327.448
+offset_top = 389.312
+offset_right = 278.92
+offset_bottom = 386.264
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/round"]
+layout_mode = 0
+offset_left = -49.0
+offset_top = -19.0
+offset_right = 2.0
+offset_bottom = 4.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Round"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sign" type="Sprite2D" parent="."]
+position = Vector2(572, 45)
+scale = Vector2(0.129272, 0.129272)
+texture = ExtResource("4_fm4ax")
+
+[node name="Label" type="Label" parent="Sign"]
+offset_left = -742.618
+offset_top = -255.275
+offset_right = 704.382
+offset_bottom = 518.725
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sign2" type="Sprite2D" parent="."]
+position = Vector2(419, 461)
+scale = Vector2(0.0655924, 0.0655924)
+texture = ExtResource("4_fm4ax")
+
+[node name="Sign3" type="Sprite2D" parent="."]
+position = Vector2(732, 465)
+scale = Vector2(0.0690104, 0.0690104)
+texture = ExtResource("4_fm4ax")
+
+[node name="Sign4" type="Sprite2D" parent="."]
+position = Vector2(582, 498)
+scale = Vector2(0.0660807, 0.0660807)
+texture = ExtResource("4_fm4ax")
+
+[node name="LineEdit" type="LineEdit" parent="Sign4"]
+offset_left = -726.385
+offset_top = -242.127
+offset_right = 648.615
+offset_bottom = 499.873
+theme_override_font_sizes/font_size = 281
+alignment = 1
+
+[node name="Sign1" type="Sprite2D" parent="."]
+position = Vector2(563, 565)
+scale = Vector2(0.0761719, 0.0761719)
+texture = ExtResource("5_mubmw")
+
+[node name="Button" type="Button" parent="Sign1"]
+offset_left = -315.077
+offset_top = -249.436
+offset_right = 640.923
+offset_bottom = 526.564
+theme_override_font_sizes/font_size = 281
+text = "PRESS
+ENTER"
+
+[node name="Label" type="Label" parent="Sign1"]
+offset_left = -315.077
+offset_top = -249.436
+offset_right = 642.923
+offset_bottom = 521.564
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 281
+text = "PRESS
+ENTER"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_rpr06")
+volume_db = -7.966
+autoplay = true
+
+[node name="correct" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_fm4ax")
+volume_db = 1.0
+
+[connection signal="text_submitted" from="Sign4/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Sign1/Button" to="." method="_on_button_pressed"]

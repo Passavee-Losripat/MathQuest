@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca7i8fpabnn6x"]
+
+[ext_resource type="Script" uid="uid://h1hlp63j5kaq" path="res://script/math_quiz.gd" id="1_nklsm"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_nklsm")
+
+[node name="CanvasModulate" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.482353)
+
+[node name="Label" type="Label" parent="CanvasModulate"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.168403
+anchor_top = 0.117284
+anchor_right = 0.755208
+anchor_bottom = 0.452161
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="timer" type="Timer" parent="CanvasModulate"]
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="CanvasModulate"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.289062
+anchor_top = 0.555556
+anchor_right = 0.624512
+anchor_bottom = 0.651235
+offset_left = 5.0
+offset_top = 33.0
+offset_right = 73.5625
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "x= ..."
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="CanvasModulate"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.40625
+anchor_top = 0.774691
+anchor_right = 0.53559
+anchor_bottom = 0.854938
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "submit"
+metadata/_edit_use_anchors_ = true
+
+[node name="CountdownLabel" type="Label" parent="CanvasModulate"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 33.0
+offset_right = 93.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 40
+text = "⏳ 25"
+
+[connection signal="pressed" from="CanvasModulate/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasModulate/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bplv8cih33qou"
+path="res://.godot/imported/splat-305791 (mp3cut.net).mp3-e00941717ca115bbb42f0b8576e18790.mp3str"
+
+[deps]
+
+source_file="res://sound/splat-305791 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/splat-305791 (mp3cut.net).mp3-e00941717ca115bbb42f0b8576e18790.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

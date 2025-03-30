@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsgah6q7qa02t"
+path="res://.godot/imported/kiss sound.mp3-c413760f918ee2fb6b0f0f487dab7f40.mp3str"
+
+[deps]
+
+source_file="res://art/kiss sound.mp3"
+dest_files=["res://.godot/imported/kiss sound.mp3-c413760f918ee2fb6b0f0f487dab7f40.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

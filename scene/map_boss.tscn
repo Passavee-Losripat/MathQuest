@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://dl5q7h325xuo5"]
+
+[ext_resource type="Texture2D" uid="uid://ckmh1qh4k7337" path="res://art/cave.png" id="1_qsw8j"]
+[ext_resource type="Texture2D" uid="uid://gea2uc3fgoc4" path="res://art/ground.png" id="2_p6rqy"]
+[ext_resource type="Texture2D" uid="uid://bjqqdkcqk2m3x" path="res://art/floating_rock.png" id="3_jrms8"]
+[ext_resource type="Texture2D" uid="uid://dkcx4ymaifx1a" path="res://art/heart.png" id="4_gmynw"]
+[ext_resource type="PackedScene" uid="uid://cbr1nob6ax22g" path="res://scene/slime.tscn" id="5_7ufws"]
+[ext_resource type="PackedScene" uid="uid://dkqpyuwjqd8ge" path="res://scene/boss_orc.tscn" id="6_60o8g"]
+[ext_resource type="AudioStream" uid="uid://tm4yjiywa4ke" path="res://sound/dark-fight-music-boss-2-252590.mp3" id="7_p6rqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxi5n"]
+size = Vector2(132.253, 1447.26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfb7r"]
+size = Vector2(66.4588, 1473.11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hb3at"]
+size = Vector2(840.074, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs7k8"]
+size = Vector2(862.453, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hyew0"]
+size = Vector2(850.019, 17.3981)
+
+[node name="map" type="Node2D"]
+
+[node name="Cave" type="Sprite2D" parent="."]
+position = Vector2(659.5, 328.5)
+scale = Vector2(0.685937, 0.686111)
+texture = ExtResource("1_qsw8j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cave"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cave/StaticBody2D"]
+position = Vector2(978.671, -233.213)
+shape = SubResource("RectangleShape2D_pxi5n")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cave/StaticBody2D"]
+position = Vector2(-967.224, -277.129)
+shape = SubResource("RectangleShape2D_xfb7r")
+
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(658, 737)
+scale = Vector2(1.73437, 0.75)
+texture = ExtResource("2_p6rqy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/StaticBody2D"]
+position = Vector2(-4.90042, -110.667)
+shape = SubResource("RectangleShape2D_hb3at")
+
+[node name="FloatingRock" type="Sprite2D" parent="."]
+position = Vector2(325, 428)
+scale = Vector2(0.383789, 0.383789)
+texture = ExtResource("3_jrms8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FloatingRock"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloatingRock/StaticBody2D"]
+position = Vector2(1.3028, -41.6896)
+shape = SubResource("RectangleShape2D_vs7k8")
+
+[node name="FloatingRock2" type="Sprite2D" parent="."]
+position = Vector2(681, 242)
+scale = Vector2(0.402344, 0.402344)
+texture = ExtResource("3_jrms8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FloatingRock2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloatingRock2/StaticBody2D"]
+position = Vector2(9.94177, -43.4951)
+shape = SubResource("RectangleShape2D_hyew0")
+
+[node name="heart1" type="Sprite2D" parent="."]
+position = Vector2(56.2585, 53.2585)
+scale = Vector2(1.39817, 1.39817)
+texture = ExtResource("4_gmynw")
+
+[node name="heart2" type="Sprite2D" parent="."]
+position = Vector2(92, 53)
+scale = Vector2(1.38419, 1.38419)
+texture = ExtResource("4_gmynw")
+
+[node name="heart3" type="Sprite2D" parent="."]
+position = Vector2(125, 53)
+scale = Vector2(1.41744, 1.41744)
+texture = ExtResource("4_gmynw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_p6rqy")
+volume_db = 0.99
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(619, 343)
+zoom = Vector2(0.94, 0.94)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("5_7ufws")]
+
+[node name="CharaterSprite2D2" parent="." instance=ExtResource("6_60o8g")]
+position = Vector2(27, 60)
