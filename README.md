@@ -15,7 +15,7 @@ MathQuest is an educational game developed using Godot, aimed at applying gamifi
 
 2. Open the Project:
 
-After downloading and installing Godot, open the project.godot file in [Godot Engine](https://godotengine.org/download).
+- After downloading and installing Godot, open the project.godot file in [Godot Engine](https://godotengine.org/download).
 
 3. Run the Game:
 
